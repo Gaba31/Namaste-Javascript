@@ -93,6 +93,13 @@ const users = [
 
 // find out list of full name from this
 
+// const fullName = users.reduce(function(acc,curr){
+//     acc.push(curr.firstName + " "+ curr.lastName); 
+//     return acc;
+// },[]);
+// console.log(fullName);
+
+
 const fullName = users.map(function(x){
     return x.firstName + " " + x.lastName;
 });
@@ -143,3 +150,4 @@ const rand = users.reduce(function(acc,curr){
 },[]);
 
 console.log(rand);
+

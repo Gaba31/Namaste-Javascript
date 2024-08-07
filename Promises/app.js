@@ -52,36 +52,36 @@
 
 // // Producer
 
-// function createOrder(cart) {
-//     return new Promise(function(resolve, reject) {
-//         if (!isValidCart(cart)) {
-//             const err = new Error("Cart is not valid");
-//             reject(err);
-//         } else {
-//             const out = "342";
-//             if (out) resolve(out);
-//         }
-//     });
-// }
+function createOrder(cart) {
+    return new Promise(function(resolve, reject) {
+        if (!isValidCart(cart)) {
+            const err = new Error("Cart is not valid");
+            reject(err);
+        } else {
+            const out = "342";
+            if (out) resolve(out);
+        }
+    });
+}
 
 
-// function isValidCart(cart) {
-//     return false;
-// }
+function isValidCart(cart) {
+    return false;
+}
 
-// function proceedToPayment(orderId) {
-//     return new Promise(function(resolve, reject) {
-//         resolve("Successful");
-//     });
-// }
+function proceedToPayment(orderId) {
+    return new Promise(function(resolve, reject) {
+        resolve("Successful");
+    });
+}
 
-// function showOrderSummary(paymentInfo) {
-//     return new Promise(function(resolve,reject){
-//         // const ecf = new Error("teri maa ki");
-//         // reject(ecf);
-//         resolve("mja aa gya");
-//     });
-// }
+function showOrderSummary(paymentInfo) {
+    return new Promise(function(resolve,reject){
+        // const ecf = new Error("teri maa ki");
+        // reject(ecf);
+        resolve("mja aa gya");
+    });
+}
 
 
 const p1 = new Promise((resolve,reject)=>{
@@ -110,9 +110,9 @@ const p3 = new Promise((resolve,reject)=>{
 
 // Promise.allSettled([])
 
-// Promise.allSettled([p1,p2,p3])
-// .then(output=> console.log(output))
-// .catch(er => console.error(er)); 
+Promise.allSettled([p1,p2,p3])
+.then(output=> console.log(output))
+.catch(er => console.error(er)); 
 
 // Promise.race([]);
 
@@ -123,6 +123,6 @@ const p3 = new Promise((resolve,reject)=>{
 
 // Promise.any([]);
 
-Promise.any([p1,p2,p3])
+Promise.any([p1,p2,p3])                
 .then(output=>console.log(output))
 .catch(err=> console.log(err.errors));
